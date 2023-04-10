@@ -13,7 +13,7 @@ function init() {
     let win1 = window.innerWidth;
     slwidth = win1 > 600 ? Math.floor(win1 * 0.8) : win1 - 20;
     if (slwidth > 800) slwidth = 800;
-  console.log(win1);
+ //console.log(win1);
     btncont.style.width = slwidth +'px'; 
     document.querySelector('.sliders').style.width = slwidth + 'px';
     sliderLine.style.width = slwidth * slidn.length + 'px';
