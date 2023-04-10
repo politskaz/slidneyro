@@ -1,0 +1,101 @@
+@font-face {
+   src: local('Calligraph  Medium'), local('Calligraph-Medium'), url('calligraphmedium.woff2') format('woff2'), url('calligraphmedium.woff') format('woff'), url('calligraphmedium.ttf') format('truetype');
+}
+* {margin:0; padding:0; border:0; box-sizing:border-box;}
+body {font-family:"Times New Roman", sans-serif; 
+    background: url(../img/4.jpg) fixed; 
+    background-size: cover;
+    margin:0; color:#fff;
+  //font-size:100%;
+    font-size:1.2rem;
+}
+header {display:block; position:fixed; 
+    width:100%; top:0; padding: 10px;
+    overflow:hidden;
+    text-align:center;
+    color:rgba(255,255,255,.9);
+    box-shadow: 1px 2px 3px #333;
+}
+header h2 {letter-spacing:3px; 
+    font-family: 'Calligraph';
+    font-weight: 400; font-weight:normal;
+  //text-shadow:-1px -1px #777, 1px 1px #333; 
+}
+.sliders { margin:0 auto; margin-top:10%; overflow:hidden; }
+.sliderLine { display:flex; position:relative; transition: all ease-in 1s;}
+
+.slid {width:100%; display:flex; justify-content:center; }
+.sl44 { width:70%; display:flex; justify-content:center; align-items:end;
+    background-image:linear-gradient(aqua, blue); 
+    border-radius:4px;
+    border: 3px solid #ccc;
+  //box-shadow: -2px 7px 20px rgba(0,0,0,0.7);
+}
+.sl44 p { color:#fff; text-shadow:2px 2px 5px #000, 4px 3px 10px #000;
+         padding-bottom:10px;
+}
+/*------------------------------------------*/
+.btncont {display:flex; justify-content:space-between; 
+    width:80%; margin:0 auto; 
+}
+.btn {width:40%; 
+   //height:100%;
+    display:flex; align-items:center;
+    color:#d0cfc5; font-size:20pt;
+    cursor:pointer; z-index:100;
+    opacity:.7;
+}
+.slnext {justify-content:flex-end; }
+.slnext:hover,.slprev:hover {opacity: 1;}
+/*------------------------------------------*/
+.slmenu {display:flex; justify-content:center; 
+    width:70%; margin:0 auto; 
+    margin-top:2%; color:#eee;
+    border-radius:4px;
+    box-sizing:border-box;
+    background-color: rgba(0,0,0,0.6); 
+    cursor:pointer;
+}
+#sliderPlay {padding:8px 7px 0 0; font-family:sans-serif; letter-spacing:2px;}
+#sliderPlay:hover {color:orangered; }
+.slul {margin:0; padding:0; font-size:1.8rem;}
+.slul li {display:inline-block; padding-left:5px;}
+.slul li:hover {color:#ccc;}
+/*----------------parallax----------------*/
+#paral1 {position:absolute; top:0; 
+    background:url(../img/4.jpg);
+    position:fixed; 
+    width:100%; height: 700px;
+    opacity: .3;
+    z-index: -3;
+    animation: 5s linear mymove2 infinite; 
+}
+@keyframes mymove2 {
+  0%  {left:-8px;}
+  50%  {left:8px;}
+  100% {left:-8px;}
+}
+footer {position:fixed; width:100%; top:94%; height:6%; color:#ccc;
+   text-align:center; padding:6px 0; background-color: rgba(0,0,0,0.6);   
+} 
+/*-------------max800--------------------*/
+@media screen and (max-width:800px) {
+     body {font-size:1rem;}
+    .sliders {margin-top:12%;}
+     .slul {font-size:1.6rem;}
+}
+@media screen and (max-device-width:600px) {
+    body {font-size:1rem;}
+    .sliders {margin-top:15%;}
+    .slul {font-size:1.5rem;}
+}
+/*-------------max500----border:1px solid pink;------*/
+@media screen and (max-device-width: 500px) {
+   body {font-size:0.8rem;}
+   .sl44 { width:86%;}
+   .sliders {margin-top:20%;}
+   .slul {font-size:1.5rem;}
+   #sliderPlay {font-size:1rem;}
+   .btncont {width:100%;} 
+   .slmenu {width:100%;} 
+}

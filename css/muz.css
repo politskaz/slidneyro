@@ -1,0 +1,32 @@
+/*------------audio---------------------*/
+.audply {position:fixed;
+        left:10px;
+        width:100px;height:30px;
+        display:flex; justify-content:center;
+        align-items:center;
+        z-index:100;
+}
+.logo1 {font-size:20pt; margin-top:-7px;}      
+#mutebtn {width:30px;height:30px; cursor:pointer; z-index:201;
+      background:url(../img/aud30a.png);
+}
+#volumeslider {width:40px; padding-left:5px; background:#7c8d8e; opacity:0;
+    margin-left:-10px; z-index:102;
+}
+input[type='range']{margin:0; padding:0; height:3px;
+       -webkit-appearance:none !important;}
+       
+input[type='range']::-webkit-slider-thumb {
+   -webkit-appearance:none !important;
+    cursor:ew-resize;
+    background-color:#448abc;
+    background:radial-gradient(#fff,#48647d);
+    width:10px;height:10px;
+	border-radius:100%;
+	cursor:pointer;
+}
+input[type="range"]::-moz-range-progress {background-color:#43e5f7;}
+input[type="range"]::-moz-range-track {background-color:#9a905d;}
+
+input[type="range"]::-ms-fill-lower {background-color:#43e5f7;}
+input[type="range"]::-ms-fill-upper {background-color:#9a905d;}

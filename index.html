@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="title" content="Заголовок" />
+    <meta name="description" content="слайдер Світає, край неба палає" />
+    <meta name="author" content="Глушковская Валентина">
+    <title>slidneyro</title>
+    <link rel="stylesheet" href="font/calligraph.css" />
+    <link rel="stylesheet" href="css/slider.css" />
+    <link rel="stylesheet" href="css/muz.css" />
+</head>
+<body>
+<header>  
+   <div class="audply"> 
+    <span class="logo1">&#9884;</span> 
+    <div id="mutebtn"></div>
+    <input id="volumeslider" type="range" min="0" max="100" value="10" step="1">
+  </div> 
+   <h2><!--i-->Світає, край неба палає<!--/i--></h2>
+   <div class="social" style="position:fixed; top:15px; right:20px;">
+      <a href="http://www.facebook.com/sharer/sharer.php?u=https://politskaz.github.io/slidneyro/&text=Світає, край неба палає">
+        <img src="img/social/fac.jpg" width="16" height="16" alt="fac" />
+      </a>
+      <a href="https://twitter.com/intent/tweet?url=https://politskaz.github.io/slidneyro/&text=Світає, край неба палає">
+        <img src="img/social/twi.jpg" width="16" height="16" alt="twi" /> 
+      </a>
+      <a href="https://t.me/share/url?url=https://politskaz.github.io/slidneyro/&text=Світає, край неба палає">
+        <img src="img/social/tel.jpg" width="16" height="16" alt="tel" />
+      </a>
+      <a href="https://api.whatsapp.com/send/?text=https://politskaz.github.io/slidneyro/">
+        <img src="img/social/wac.jpg" width="16" height="16" alt="wha" />
+      </a>
+   </div>
+</header>     
+<div class="sliders">
+    <div class="sliderLine">
+       <!--Data.js--->
+    </div> 
+</div> 
+<div class="btncont">
+    <div class="btn slprev"><span>&#10094;</span></div>
+    <div class="btn slnext"><span>&#10095;</span></div>
+</div> 
+<div class="slmenu">
+    <span id="sliderPlay">►</span>
+    <ul class="slul">
+      <!--li id="01">&bull;</li-->  
+    </ul>
+</div>
+<!-------parallax-------->
+<div id="paral1"></div>
+<!----------------------->
+<footer>
+   <h6>2023 &copy; Дизайн и разработка: Валентины.
+   Замечания по работе сайта можете направить по адресу: gvp88@meta.ua</h6>
+</footer> 
+<!----------------------------------------->
+<script src="js/Data.js"></script>
+<script>
+ //console.log(posts.length)
+    const slidLin = document.querySelector('.sliderLine');
+    const slul = document.querySelector('.slul');
+  //const t1 = '&bull;&nbsp;';
+  //* posts.forEach */
+    posts.map( (el,i) => { 
+        const divElem = document.createElement('div');
+        divElem.className = 'slid';
+        let back4 = '';
+        if (el.foto.trim() !== '') { 
+          back4 = 'background:url(img/'+el.foto+');background-position:center center;background-size:cover;';
+        }; 
+        divElem.innerHTML = '<div class="sl44" style='+back4+'><p>'+el.fraza+'</p></div>';
+        slidLin.append(divElem);
+        
+       //const liElem = document.createElement('li');
+       //liElem.id = String(i+1);
+       //liElem.textContent = '•'; 
+       //slul.append(liElem);
+       slul.innerHTML += '<li id="' + String(i+1) + '">&bull;</li>';
+    });
+</script>
+<script src="js/slider.js"></script>
+<script src="js/muz.js"></script>
+</body>
+</html>
